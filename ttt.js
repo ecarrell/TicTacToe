@@ -1,4 +1,8 @@
-var game - {
-	var x = 10;
-
-}
+var table = {
+	
+	//Initial size of table
+	tableCol: 30,
+	tableRow: 30
+	
+	
+};
