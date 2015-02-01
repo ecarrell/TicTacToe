@@ -8,12 +8,13 @@ var table = {
 };
 
 function setUp(){
-	$('#resetBtn').click(function(){ console.log("Click!");});
+	//build table after loading DOM
+	buildTable($('#slider').val());
 	
-	
-	// Listen for changes in value
-
-
+	//event listener for reset button
+	$('#resetBtn').click(function(){ console.log("Click!");
+		buildTable($('#slider').val());
+	});
 };
 
 //Output the slider value to user while sliding
