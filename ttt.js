@@ -7,11 +7,11 @@ var table = {
 
 table.setUp = function(){
 	//build table after loading DOM
-	buildTable($('#slider').val());
+	table.buildTable($('#slider').val());
 	
 	//event listener for reset button
 	$('#resetBtn').click(function(){ console.log("Click!");
-		buildTable($('#slider').val());
+		table.buildTable($('#slider').val());
 	});
 };
 
@@ -20,8 +20,8 @@ table.SliderChange = function (){
 	$('#sizeNumber').html($('#slider').val());
 }
 
-//This function is called initially and everytime the user changes
-//the size slider's value
+//This function is called initially and every time the user changes
+//the slider's value
 table.buildTable = function(rowCol) {
 
 	var row = document.getElementsByTagName('table')[0];
