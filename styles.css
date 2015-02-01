@@ -1,0 +1,14 @@
+
+#table	{
+	
+	position: relative;
+	margin: 25px;
+	float: left;
+	width: 90vh;
+	height: 90vh;
+	border-collapse: collapse;
+	
+}
+#table td {
+	border: 2px solid black;
+}

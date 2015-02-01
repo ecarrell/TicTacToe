@@ -1,13 +1,11 @@
 var table = {
 	
-	//Initial size of table
+	//add array to keep track of agents and empty cells
+	cellContents: []
 
-	
-	
-	
 };
 
-function setUp(){
+table.setUp = function(){
 	//build table after loading DOM
 	buildTable($('#slider').val());
 	
@@ -18,16 +16,19 @@ function setUp(){
 };
 
 //Output the slider value to user while sliding
-function SliderChange(){
+table.SliderChange = function (){
 	$('#sizeNumber').html($('#slider').val());
 }
+
 //This function is called initially and everytime the user changes
 //the size slider's value
-function buildTable(rowCol) {
+table.buildTable = function(rowCol) {
 
+	var row = document.getElementsByTagName('table')[0];
+	row.innerHTML = '';
+		
 	//this loop runs through the rows
 	for(var i = 0; i < rowCol; i++) {
-		var row = document.getElementsByTagName('table')[0];
 		var tr = document.createElement('TR');
 		row.appendChild(tr);
 		
@@ -40,4 +41,4 @@ function buildTable(rowCol) {
 	}
 };
 
-$(document).ready(setUp);
+$(document).ready(table.setUp);
