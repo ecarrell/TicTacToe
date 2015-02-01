@@ -7,6 +7,19 @@ var table = {
 	
 };
 
+function setUp(){
+	$('#resetBtn').click(function(){ console.log("Click!");});
+	
+	
+	// Listen for changes in value
+
+
+};
+
+//Output the slider value to user while sliding
+function SliderChange(){
+	$('#sizeNumber').html($('#slider').val());
+}
 //This function is called initially and everytime the user changes
 //the size slider's value
 function buildTable(rowCol) {
@@ -25,6 +38,5 @@ function buildTable(rowCol) {
 		}
 	}
 };
-$(document).ready(function(){
-$('#resetBtn').click(function(){ console.log("Click!");});
-});
+
+$(document).ready(setUp);
